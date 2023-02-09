@@ -32,14 +32,14 @@ background-size: 10px 10px;
   font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   overflow: hidden;
 }
 
 #text {
   text-align: center;
   margin: 3% 5%;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 #text:before {
   content:'"'
@@ -51,7 +51,8 @@ background-size: 10px 10px;
 #author {
   text-align: right;
   margin-right: 10%;
-  margin-top: -10px;
+  margin-top: -25%;
+  font-size: 1rem;
 }
 
 #author:before {
@@ -102,9 +103,54 @@ background-size: 10px 10px;
 }
 
 #button-box {
-  margin: 5% 5%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
 }
 
+@media (max-width: 600px) {
+  #quote-box {
+    width: 90%;
+    left:5%;
+    height: 80%;
+    top: 10%;
+  }
+  #tweet-quote {
+    font-size: 0.6em;
+  }
+  #new-quote {
+    height: 35px;
+    padding: 5px;
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 400px) {
+  #quote-box {
+    justify-content: space-around;
+  }
+  #author {
+    margin-top: 0;
+    font-size: 12px;
+  }
+  #text {
+    font-size: 1rem;
+  }
+  #button-box {
+    position: static;
+    width: 100%;
+  }
+  #tweet-quote {
+    font-size: 0.4em;
+  }
+  #new-quote {
+    height: 20px;
+    padding: 3px;
+    font-size: 10px;
+  }
+}
